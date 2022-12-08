@@ -1,0 +1,505 @@
+:root {
+  --bg-color: #550701;
+  --upper-card-layer: #BE2501;
+  --lower-card-layer: #911201;
+  --button-color: #F07601; 
+  --nav-text: #550701;
+  --form-color: black;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: 'Iceberg';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sunsetMountains {
+  z-index: -1;
+  position: absolute;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+}
+
+.sectionTitle {
+  color: white;
+  font-size: 32px;
+}
+
+.aboutMeAdjustment {
+  display: flex;
+}
+
+.vacayPic {
+  height: 500px;
+  width: 250px;
+  margin-left: 50px;
+}
+
+.contactMePart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contactLinks a {
+  color: white;
+  font-size: 20px;
+}
+
+.refference {
+  width: 500px;
+  padding-top: 50px;
+}
+
+.refferenceContent{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 480px;
+  padding: 10px;
+  margin-left: 15px;
+}
+
+.refferenceContent p{
+  color: #fff;
+  margin: 5px;
+}
+
+footer {
+  color: #fff;
+  margin-top: 150px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.videoText {
+  color: #fff;
+  width: 480px;
+}
+
+/* card commponents */
+
+.cardComponent {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--upper-card-layer);
+  box-shadow: 10px 10px  var(--lower-card-layer);
+  transition: all 0.3s ease;
+  color: white;
+  padding: 5px;
+}
+
+.tinyCard {
+  display: flex;
+  flex-direction: column;
+  width: 10px;
+  height: 135px;
+  background-color: var(--upper-card-layer);
+  box-shadow: 5px 5px  var(--lower-card-layer);
+  transition: all 0.3s ease;
+}
+
+.smallCard {
+  width: 350px;
+  height: 175px;
+}
+
+.largeCard {
+  width: 500px;
+  height: 300px;
+  padding: 15px;
+}
+
+.cardProjectStyle {
+  display: flex;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.cardIcons {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px;
+}
+
+.cardTitle, .cardPosition {
+  padding: 5px;
+  margin: 0;
+}
+
+.cardDescription {
+  padding: 5px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.cardDate {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cardLink {
+  padding: 5px;
+  font-size: 13px;
+}
+
+.cardIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 90%;
+  background-color: var(--button-color);
+  margin: 7px;
+}
+
+.shrinkIcon {
+  height: 35px;
+  width: 35px;
+}
+
+.allCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 100px;
+  grid-row-gap: 50px;
+}
+
+/* Header components */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upperPart {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.topRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.navComponent {
+  display: flex;
+  padding: 5px;
+}
+
+.navComponent a {
+  text-decoration: none;
+  color: var(--nav-text);
+  font-size: 24px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.navComponent a:hover {
+  color:  var(--lower-card-layer);
+}
+
+#myLogo {
+  height: 60px;
+  border-radius: 90%;
+  padding: 15px;
+}
+
+.myName {
+  display: flex;
+  align-items: center;
+  height: 600px;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+.scrollDownButton #downIcon {
+  align-self: flex-end;
+  height: 45px;
+  width: 45px;
+  border-radius: 90%;
+  background-color: var(--button-color);
+}
+
+.scrollDownButton,
+#downIcon {
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+  animation-delay: 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  51% {
+    transform: translateY(-16px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Language Spin component */
+
+#skillsSpinContainer {
+  display: grid;
+  place-items: center;
+  min-height: 500px;
+  width: 500px;
+  color: #fff;
+}
+
+#skillsSpinContainer > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.words {
+  transform: rotate(90deg);
+  background-color: rgba(0, 0, 0, 0);
+
+}
+
+.words:hover {
+  color: var(--upper-card-layer);
+  animation: standOut 1s linear;
+  cursor: default;
+}
+
+#spin {
+  position: relative;
+}
+
+.spin {
+  animation: spinAround 10s linear infinite;
+}
+
+.spinInner {
+  animation: spinAroundInner 10s linear infinite;
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg) translate(180px);
+  }
+
+  to {
+    transform: rotate(360deg) translate(180px);
+  }
+}
+
+@keyframes spinAroundInner {
+  from {
+    transform: rotate(360deg) translate(100px);
+  }
+
+  to {
+    transform: rotate(0deg) translate(100px);
+  }
+}
+
+@keyframes standOut {
+  from {
+    transform: scaleX(1) scaleY(1) rotate(90deg);
+  }
+
+  to {
+    transform: scaleX(1.5) scaleY(1.5) rotate(90deg);
+  }
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+}
+
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: -8px;
+  bottom: 0;
+  background-color: var(--upper-card-layer);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--lower-card-layer);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #092e4b;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #092e4b;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  25% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  49% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(16px);
+    opacity: 1;
+  }
+
+  55% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+.clickMeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 40px;
+  background-color: var(--button-color);
+  border-radius: 34px;
+  opacity: 0;
+  animation: fadeInOut 7s forwards infinite ;
+  animation-delay: 1s;
+}
+
+p.clickMeButton span:before{
+  content:'';
+  display:block;
+  width:0;
+  height:0;
+  position:absolute;
+  border-bottom: 8px solid var(--button-color);
+  border-right:8px solid transparent;
+  border-left:8px solid transparent;
+  top: -8px;
+  left: 32px;
+}
+
+#workexperience,
+#projects,
+#languages,
+#aboutme,
+#refferences {
+  display: none;
+}
+
+.visitor-item {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  order: 0;
+  margin: 10px;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:valid {
+  border: 1px solid green;
+}
+
+#visitorForm {
+  background-color: var(--upper-card-layer);
+  color: var(--form-color)
+}
